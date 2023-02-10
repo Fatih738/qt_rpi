@@ -1,1 +1,13 @@
 https://github.com/PhysicsX/QTonRaspberryPi/tree/main/QtRaspberryPi5.14.2
+
+sync -avz --rsync-path="sudo rsync" pi@192.168.x.xxx:/lib/ sysroot/lib
+  rsync -avz --rsync-path="sudo rsync" pi@192.168.x.xxx:/usr/include/ sysroot/usr/include
+  rsync -avz --rsync-path="sudo rsync" pi@192.168.x.xxx:/lib/ sysroot/lib
+  rsync -avz --rsync-path="sudo rsync" pi@192.168.x.xxx:/usr/lib/ sysroot/usr/lib
+  rsync -avz --rsync-path="sudo rsync" pi@192.168.x.xxx:/opt/vc/ sysroot/opt/vc
+  
+  
+   evrypi@192.168.1.61
+  
+   rsync -avz --rsync-path="sudo rsync" sysroot/usr/local/qt5pi evrypi@192.168.1.61:/usr/local
+  
