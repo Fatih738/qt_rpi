@@ -50,7 +50,21 @@ sudo bash
 apt-get install gcc git bison python gperf pkg-config
 apt install make
 apt install libclang-dev
+apt install build-essential
+mkdir /opt/qt5pi
+chown evrypi:evrypi /opt/qt5pi
+cd /opt/qt5pi/
 
+wget https://releases.linaro.org/components/toolchain/binaries/latest-7/arm-linux-gnueabihf/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf.tar.xz
+tar xf gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf.tar.xz 
+export PATH=$PATH:/opt/qt5pi/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/bin
+nano ~/.bashrc
+
+wget https://download.qt.io/official_releases/qt/5.15/5.15.2/single/qt-everywhere-src-5.15.2.tar.xz
+tar xf qt-everywhere-src-5.15.2.tar.xz 
+cat qt-everywhere-src-5.15.2/qtbase/mkspecs/linux-arm-gnueabi-g++/qmake.conf
+  
+ping 192.168.1.61
 
 
 3- QtCreator Installation Run & Deply Compiled Example
