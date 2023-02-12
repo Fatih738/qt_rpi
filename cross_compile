@@ -65,6 +65,18 @@ tar xf qt-everywhere-src-5.15.2.tar.xz
 cat qt-everywhere-src-5.15.2/qtbase/mkspecs/linux-arm-gnueabi-g++/qmake.conf
   
 ping 192.168.1.61
+mkdir sysroot sysroot/usr sysroot/opt" before rsync
 
+rsync -avz --rsync-path="sudo rsync" evrypi@192.168.1.61:/lib/ sysroot/lib
+rsync -avz --rsync-path="sudo rsync" evrypi@192.168.1.61:/usr/include/ sysroot/usr/include
+rsync -avz --rsync-path="sudo rsync" evrypi@192.168.1.61:/lib/ sysroot/lib
+rsync -avz --rsync-path="sudo rsync" evrypi@192.168.1.61:/usr/lib/ sysroot/usr/lib
+rsync -avz --rsync-path="sudo rsync" evrypi@192.168.1.61:/opt/vc/ sysroot/opt/vc
+  
+  
+   evrypi@192.168.1.61
+  
+   rsync -avz --rsync-path="sudo rsync" sysroot/usr/local/qt5pi evrypi@192.168.1.61:/usr/local
+  
 
 3- QtCreator Installation Run & Deply Compiled Example
