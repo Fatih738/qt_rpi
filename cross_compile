@@ -4,9 +4,53 @@ https://github.com/PhysicsX/QTonRaspberryPi/tree/main/QtRaspberryPi5.14.2
 1- make raspberry pi ready for compilation
 install "Raspian buster with desktop", use Win32 Disk Imager to write to sd card, insert sd card and boot raspberry pi
 
+sudo vi /etc/apt/sources.list    remove uncomment deb-src..   wq!
+sudo apt update
+sudo apt full-upgrade
+sudo reboot
+sudo rpi-update
+sudo reboot
+/** yeni bir sürüöö olursa otomatik güncellesin diye
+cat /boot/.firmware_revision
+f524729d84d527efd3751679c8c68445bb171b20
+sudo rpi-update f524729d84d527efd3751679c8c68445bb171b20
+ls /opt/vc/lib/
+*/
+sudo apt-get build-dep qt5-qmake
+sudo apt-get build-dep libqt5webengine-data
+
+sudo apt-get install libboost1.58-all-dev libudev-dev libinput-dev libts-dev libmtdev-dev libjpeg-dev libfontconfig1-dev 
+sudo apt-get install libssl-dev libdbus-1-dev libglib2.0-dev libxkbcommon-dev libegl1-mesa-dev libgbm-dev libgles2-mesa-dev mesa-common-dev
+sudo apt-get install libasound2-dev libpulse-dev gstreamer1.0-omx libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev  gstreamer1.0-alsa
+sudo apt-get install libvpx-dev libsrtp0-dev libsnappy-dev libnss3-dev
+sudo apt-get install "^libxcb.*"
+sudo apt-get install flex bison libxslt-dev ruby gperf libbz2-dev libcups2-dev libatkmm-1.6-dev libxi6 libxcomposite1
+sudo apt-get install libfreetype6-dev libicu-dev libsqlite3-dev libxslt1-dev libavcodec-dev libavformat-dev libswscale-dev 
+sudo apt-get install libgstreamer0.10-dev gstreamer-tools libraspberrypi-dev libx11-dev libglib2.0-dev 
+sudo apt-get install freetds-dev libsqlite0-dev libpq-dev libiodbc2-dev firebird-dev libjpeg9-dev libgst-dev libxext-dev libxcb1 libxcb1-dev libx11-xcb1 
+sudo apt-get install libx11-xcb-dev libxcb-keysyms1 libxcb-keysyms1-dev libxcb-image0 libxcb-image0-dev libxcb-shm0 libxcb-shm0-dev libxcb-icccm4 libxcb-icccm4-dev 
+sudo apt-get install libxcb-sync1 libxcb-sync-dev libxcb-render-util0 libxcb-render-util0-dev libxcb-xfixes0-dev libxrender-dev libxcb-shape0-dev libxcb-randr0-dev 
+sudo apt-get install libxcb-glx0-dev libxi-dev libdrm-dev libssl-dev libxcb-xinerama0 libxcb-xinerama0-dev
+sudo apt-get install libatspi-dev libssl-dev libxcursor-dev libxcomposite-dev libxdamage-dev libfontconfig1-dev 
+sudo apt-get install libxss-dev libxtst-dev libpci-dev libcap-dev libsrtp0-dev libxrandr-dev libnss3-dev libdirectfb-dev libaudio-dev
+
+
+sudo mkdir /usr/local/qt5pi
+sudo chown evrypi:evrypi /usr/local/qt5pi
+ls -l /usr/local/qt5pi/
+ls -l /usr/local/
 
 2- ubuntu VM - Qt Compilation
 8gb ram, 100gb disk, 80mb video, 4cpu
+
+sudo apt-get update
+sudo apt-get upgrade
+ping 192.168.1.61
+sudo bash
+apt-get install gcc git bison python gperf pkg-config
+apt install make
+apt install libclang-dev
+
 
 
 3- QtCreator Installation Run & Deply Compiled Example
