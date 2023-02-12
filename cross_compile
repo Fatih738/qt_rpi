@@ -5,9 +5,8 @@ https://github.com/PhysicsX/QTonRaspberryPi/tree/main/QtRaspberryPi5.14.2
 install "Raspian buster with desktop", use Win32 Disk Imager to write to sd card, insert sd card and boot raspberry pi
 
 
-
-
 2- ubuntu VM - Qt Compilation
+8gb ram, 100gb disk, 80mb video, 4cpu
 
 
 3- QtCreator Installation Run & Deply Compiled Example
