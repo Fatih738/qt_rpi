@@ -1,0 +1,13 @@
+https://www.youtube.com/watch?v=TmtN3Rmx9Rk
+https://github.com/PhysicsX/QTonRaspberryPi/tree/main/QtRaspberryPi5.14.2
+
+1- make raspberry pi ready for compilation
+install "Raspian buster with desktop", use Win32 Disk Imager to write to sd card, insert sd card and boot raspberry pi
+
+
+
+
+2- ubuntu VM - Qt Compilation
+
+
+3- QtCreator Installation Run & Deply Compiled Example
