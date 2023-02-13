@@ -9,4 +9,5 @@ http://ftp.jaist.ac.jp/pub/raspberrypi/raspbian_full/images/raspbian_full-2020-0
 how to connect raspberry pi to wifi using terminal
 https://linuxhint.com/connect-raspberry-pi-wifi-using-terminal/
 
-
+eth0 169.254.93.53/16
+wlan0 192.168.1.61/24
