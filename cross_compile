@@ -71,11 +71,11 @@ cat qt-everywhere-src-5.15.2/qtbase/mkspecs/linux-arm-gnueabi-g++/qmake.conf
 ping 192.168.1.61
 mkdir sysroot sysroot/usr sysroot/opt" before rsync
 
-rsync -avz --rsync-path="sudo rsync" evrypi@192.168.1.61:/lib/ sysroot/lib
-rsync -avz --rsync-path="sudo rsync" evrypi@192.168.1.61:/usr/include/ sysroot/usr/include
-rsync -avz --rsync-path="sudo rsync" evrypi@192.168.1.61:/lib/ sysroot/lib
-rsync -avz --rsync-path="sudo rsync" evrypi@192.168.1.61:/usr/lib/ sysroot/usr/lib
-rsync -avz --rsync-path="sudo rsync" evrypi@192.168.1.61:/opt/vc/ sysroot/opt/vc
+rsync -avz --rsync-path="sudo rsync" pi@192.168.1.61:/lib/ sysroot/lib
+rsync -avz --rsync-path="sudo rsync" pi@192.168.1.61:/usr/include/ sysroot/usr/include
+rsync -avz --rsync-path="sudo rsync" pi@192.168.1.61:/lib/ sysroot/lib
+rsync -avz --rsync-path="sudo rsync" pi@192.168.1.61:/usr/lib/ sysroot/usr/lib
+rsync -avz --rsync-path="sudo rsync" pi@192.168.1.61:/opt/vc/ sysroot/opt/vc
 
 
 ls sysroot/usr/lib/arm-linux-gnueabihf/libEGL.so.1.1.0
@@ -93,11 +93,11 @@ wget https://raw.githubusercontent.com/riscv/riscv-poky/master/scripts/sysroot-r
 chmod +x sysroot-relativelinks.py 
 ./sysroot-relativelinks.py sysroot
 
-rsync -avz --rsync-path="sudo rsync" evrypi@192.168.1.61:/lib/ sysroot/lib
-rsync -avz --rsync-path="sudo rsync" evrypi@192.168.1.61:/usr/include/ sysroot/usr/include
-rsync -avz --rsync-path="sudo rsync" evrypi@192.168.1.61:/lib/ sysroot/lib
-rsync -avz --rsync-path="sudo rsync" evrypi@192.168.1.61:/usr/lib/ sysroot/usr/lib
-rsync -avz --rsync-path="sudo rsync" evrypi@192.168.1.61:/opt/vc/ sysroot/opt/vc
+rsync -avz --rsync-path="sudo rsync" pi@192.168.1.61:/lib/ sysroot/lib
+rsync -avz --rsync-path="sudo rsync" pi@192.168.1.61:/usr/include/ sysroot/usr/include
+rsync -avz --rsync-path="sudo rsync" pi@192.168.1.61:/lib/ sysroot/lib
+rsync -avz --rsync-path="sudo rsync" pi@192.168.1.61:/usr/lib/ sysroot/usr/lib
+rsync -avz --rsync-path="sudo rsync" pi@192.168.1.61:/opt/vc/ sysroot/opt/vc
 
 ./sysroot-relativelinks.py sysroot
 mkdir qt5build
@@ -107,11 +107,11 @@ make -j8
 make install
 ls /opt/qt5pi/sysroot/usr/local/qt5pi/bin/qmake
 cd /opt/qt5pi/
-rsync -avz --rsync-path="sudo rsync" sysroot/usr/local/qt5pi evrypi@192.168.1.61:/usr/local
+rsync -avz --rsync-path="sudo rsync" sysroot/usr/local/qt5pi pi@192.168.1.61:/usr/local
 
 sudo apt install qtcreator
 sudo qtcreator
-   evrypi@192.168.1.61
+   pi@192.168.1.61
   
   
 
