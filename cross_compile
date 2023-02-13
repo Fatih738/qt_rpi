@@ -109,6 +109,8 @@ ls /opt/qt5pi/sysroot/usr/local/qt5pi/bin/qmake
 cd /opt/qt5pi/
 rsync -avz --rsync-path="sudo rsync" sysroot/usr/local/qt5pi evrypi@192.168.1.61:/usr/local
 
+sudo apt install qtcreator
+sudo qtcreator
    evrypi@192.168.1.61
   
   
