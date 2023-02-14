@@ -109,10 +109,46 @@ ls /opt/qt5pi/sysroot/usr/local/qt5pi/bin/qmake
 cd /opt/qt5pi/
 rsync -avz --rsync-path="sudo rsync" sysroot/usr/local/qt5pi pi@192.168.1.61:/usr/local
 
-sudo apt install qtcreator
-sudo qtcreator
    pi@192.168.1.61
   
   
-
 3- QtCreator Installation Run & Deply Compiled Example
+
+sudo apt install qtcreator
+sudo qtcreator
+/**
+qt creator içinde
+tools->kits->add->RaspiQt, Generic Linux Device, Qt version Qt15.5.2(qt5pi)
+tools->kits->RaspiQt ..Qtversions->(manual)add-> /opt/qt5pi/sysroot/usr/local/qt5pi/bin/qmake
+tools->kits->compilers->add->gcc->c->name(gcc_raspi), browse-> /opt/qt5pi/gcc_linaro7.5.0-..m-linuux-gnueabihf/bin/arm-linugnueabihf-gcc(arm-linugnueabihf-7.5.0 ın üstünde), ABI<custom>
+tools->kits->compilers->add->gcc->c++->name(g++_raspi), browse-> /opt/qt5pi/gcc_linaro7.5.0-..m-linuux-gnueabihf/bin/arm-linugnueabihf-g++(arm-linugnueabihf-7.5.0 ın üstünde), ABI <custom>
+tools->kits-> raspiQt ..compiler C gcc_raspi, C++ g++_raspi
+
+tools->devices-> add generic linux device -> -----------
+Raspberry
+192.168.1.61
+pi
+next, next, finish...device test failed
+authentication type default .. test.. enter ip address of pi .. success.. 
+apply and ok
+-------------
+create a project..... project name you will use
+project location is home/evrypi/Desktop .. next .. next.. next.. next ..next .. RaspiQt select and next.. finish
+project->Build->build directory change to release (debug computer --- release select) and copy here
+build -> run qmake.. compile output..
+
+open the terminal in linux-> 
+cd /home/evrypi/Desktop/paste here copy of release, press enter
+ls
+file EvryDashboard(project name)
+scp EvryDashboard pi@192.168.1.61:/home/pi .. press enter .. yes .. password
+
+open terminal on raspberry->
+ls
+./EvryDashboard(project name)
+
+gui is running on Raspberry pi
+
+
+
+*/
