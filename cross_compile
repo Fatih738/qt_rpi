@@ -157,8 +157,8 @@ export DISPLAY=:0.0
 export XAUTHORITY=/home/pi/.Xauthrity
 export XDG_SESSION_TYPE=x11
 
-png ler ile ilgili lib hatası verirse convert
-ubuntu terminak ekranına->
+png ler ile ilgili libpng hatası verirse convert
+ubuntu terminal ekranına->
 sudo apt-get install imagemagick
 convert -version
 cd fotoğrafların içine gir
