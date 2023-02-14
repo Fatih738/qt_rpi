@@ -149,6 +149,18 @@ ls
 
 gui is running on Raspberry pi
 
+projeyi çalıştırmıyacak
+bunları raspberry pi terminal ekranına gir
 
+export QT_QPA_PLATFOMRTHEME=qt5ct
+export DISPLAY=:0.0
+export XAUTHORITY=/home/pi/.Xauthrity
+export XDG_SESSION_TYPE=x11
 
+png ler ile ilgili lib hatası verirse convert
+ubuntu terminak ekranına->
+sudo apt-get install imagemagick
+convert -version
+cd fotoğrafların içine gir
+convert tacho.png tacho.png
 */
