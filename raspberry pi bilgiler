@@ -9,6 +9,11 @@ http://ftp.jaist.ac.jp/pub/raspberrypi/raspbian_full/images/raspbian_full-2020-0
 how to connect raspberry pi to wifi using terminal
 https://linuxhint.com/connect-raspberry-pi-wifi-using-terminal/
 
+open terminal -> pinout
+https://pinout.xyz/
+
+
+
 raspberry pi static ip verme
 ------------------------
 nano /etc/dhcpcd.conf
