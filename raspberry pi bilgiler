@@ -31,3 +31,25 @@ static ip_address=192.168.1.61/24
 
 eth0 169.254.93.53/16
 wlan0 192.168.1.61/24
+------------------------------------
+
+raspberry pi SPI kullanımı
+https://www.sigmdel.ca/michel/ha/rpi/spi_on_pi_en.html
+
+SPI enable için 1.yol terminal -> sudo nano /boot/config.txt
+/**
+# Uncomment some or all of these to enable the optional hardware interfaces
+#dtparam=i2c_arm=on
+#dtparam=i2s=on
+dtparam=spi=on
+*/
+SPI enable için 2.yol terminal -> sudo raspi-config -> interface options..
+
+terminal devam
+dtoverlay -h spi0-2cs
+
+
+
+
+
+
