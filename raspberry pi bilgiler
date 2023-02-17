@@ -12,6 +12,11 @@ https://linuxhint.com/connect-raspberry-pi-wifi-using-terminal/
 open terminal -> pinout
 https://pinout.xyz/
 
+ekrana kablo bağlantıları
+-----
+byg r
+--yg
+--br
 
 
 raspberry pi static ip verme
@@ -47,6 +52,9 @@ SPI enable için 2.yol terminal -> sudo raspi-config -> interface options..
 
 terminal devam
 dtoverlay -h spi0-2cs
+
+
+------------
 
 
 
