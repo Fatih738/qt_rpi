@@ -60,5 +60,7 @@ dtoverlay -h spi0-2cs
 Raspberry Pi - Autostart Application with Splash Screen
 https://www.youtube.com/watch?v=m3rfls00OtY
 
-
+ubuntu da cmd
+sudo nano /boot/config.txt -> add disable_splash=1
+sudo nano /boot/cmdline.txt ->
 
