@@ -157,6 +157,9 @@ export DISPLAY=:0.0
 export XAUTHORITY=/home/pi/.Xauthrity
 export XDG_SESSION_TYPE=x11
 
+üstteki export komutları sırası ile raspberry pi terminal ekranına girildikten sonra
+./speedometer çalıştırılır
+
 png ler ile ilgili libpng hatası verirse convert
 ubuntu terminal ekranına->
 sudo apt-get install imagemagick
