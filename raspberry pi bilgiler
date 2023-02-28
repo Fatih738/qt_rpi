@@ -54,6 +54,23 @@ SPI enable için 2.yol terminal -> sudo raspi-config -> interface options..
 terminal devam
 dtoverlay -h spi0-2cs
 
+cd /etc/systemd/system
+sudo nano speedometer.service
+[Unit]
+Description=Qt application autostart
+After=graphical.target
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi
+ExecStart=/home/pi/speedometer
+
+[Install]
+WantedBy=multi-user.target
+
 
 ------------
 
