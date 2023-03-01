@@ -1,3 +1,13 @@
 STM32 CAN BUS Tutorial
 CAN BUS is an easy to use protocol with just 2 wires and 2 termination resistor. We can connect upto 127 devices on CAN Bus.
 https://www.dailyduino.com/index.php/2020/06/01/stm32-can-bus/
+
+
+canbus device bağlantı böyle yapılır
+https://manualzz.com/doc/42379741/sigma-can-bus-wiring
+
+
+8 kanallı mux ürün linki
+https://www.robotistan.com/cjmcu-4051-analog-coklayici-modulu?language=tr&h=9e5a481f
+8 kanallı mux datasheet
+https://www.ti.com/lit/ds/symlink/cd74hc4051-ep.pdf?ts=1677590129466&ref_url=https%253A%252F%252Fwww.google.lt%252F
