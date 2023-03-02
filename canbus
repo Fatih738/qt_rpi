@@ -100,9 +100,9 @@ Monomer temperature 1~16
 Priority + data ID+ PC address +BMS address
 0x18964001 rx
 
-/** Each unit voltage of 2 byte, according
-* to the actual number of units sent, 
-* a maximum of 96 byte, divided into 16 frames sent
+/** Each temperature is 1 byte, sent
+* according to the actual
+* number of temperature used, a maximum of 21 byte, divided into 3 frames
 */
 
 byte 0          : frame number, starting at 0
