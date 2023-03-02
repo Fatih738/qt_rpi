@@ -11,3 +11,16 @@ https://manualzz.com/doc/42379741/sigma-can-bus-wiring
 https://www.robotistan.com/cjmcu-4051-analog-coklayici-modulu?language=tr&h=9e5a481f
 8 kanallı mux datasheet
 https://www.ti.com/lit/ds/symlink/cd74hc4051-ep.pdf?ts=1677590129466&ref_url=https%253A%252F%252Fwww.google.lt%252F
+
+
+                bms den veri alımı
+--------------------data 1 begin-------------------------
+Priority + data ID+BMS address + PC address
+0x18900140 tx
+Priority + data ID+ PC address +BMS address
+0x18904001 rx
+
+byte 0 byte 1 : total voltage of pack / 10
+byte 4 byte 5 : mean current, offset is 30 000
+byte 6 byte 7 : SOC (0.1 %)
+--------------------data 1 end-------------------------
