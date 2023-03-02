@@ -15,6 +15,7 @@ https://www.ti.com/lit/ds/symlink/cd74hc4051-ep.pdf?ts=1677590129466&ref_url=htt
 
                 bms den veri alımı
 --------------------data 1 begin-------------------------
+SOCSOC of Total Voltage Current
 Priority + data ID+BMS address + PC address
 0x18900140 tx
 Priority + data ID+ PC address +BMS address
@@ -24,3 +25,40 @@ byte 0 byte 1 : total voltage of pack / 10
 byte 4 byte 5 : mean current, offset is 30 000
 byte 6 byte 7 : SOC (0.1 %)
 --------------------data 1 end-------------------------
+--------------------data 2 begin-------------------------
+Maximum Minimum Voltage of Monomer
+Priority + data ID+BMS address + PC address
+0x18910140 tx
+Priority + data ID+ PC address +BMS address
+0x18914001 rx
+
+byte 0 byte 1 : max monomer voltage (mV)
+byte 2        : max unit voltage cell no
+byte 3 byte 4 : min monomer voltage (mV)
+byte 5        : min unit voltage cell no
+--------------------data 2 end-------------------------
+--------------------data 3 begin-------------------------
+Maximum minimum temperature of monomer
+Priority + data ID+BMS address + PC address
+0x18920140 tx
+Priority + data ID+ PC address +BMS address
+0x18924001 rx
+
+byte 0        : max monomer temp (40 offset, °C)
+byte 1        : max monomer temp cell no
+byte 2        : min monomer temp (40 offset, °C)
+byte 3        : min monomer temp cell no
+--------------------data 3 end-------------------------
+--------------------data 4 begin-------------------------
+Charge/discharge, MOS status
+Priority + data ID+BMS address + PC address
+0x18930140 tx
+Priority + data ID+ PC address +BMS address
+0x18934001 rx
+
+byte 0         : charge/discharge status (0 stationary ,1 charged ,2 discharged)
+byte 1         : charging MOS tube status
+byte 2         : discharge MOS tube state
+byte 3         : BMS life(0~255 cycles)
+byte 4 ~ byte7 : residual capacity (mAH)
+--------------------data 4 end-------------------------
