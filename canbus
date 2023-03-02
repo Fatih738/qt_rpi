@@ -62,3 +62,50 @@ byte 2         : discharge MOS tube state
 byte 3         : BMS life(0~255 cycles)
 byte 4 ~ byte7 : residual capacity (mAH)
 --------------------data 4 end-------------------------
+--------------------data 5 begin-------------------------
+Status Information 
+1Priority + data ID+BMS address + PC address
+0x18940140 tx
+Priority + data ID+ PC address +BMS address
+0x18944001 rx
+
+byte 0          : battery string
+byte 1          : temperature
+byte 2          : charger status (0 disconnected ,1 connected)
+byte 3          : load status (0 disconnected ,1 access)
+byte 4          : DO4State | DO3State | DO2State | DO1State | DI4State | DI3State | DI2State | DI1State
+byte 5 ~ byte 6 : charge/discharge cycles
+byte 7          : reserved
+--------------------data 5 end-------------------------
+--------------------data 6 begin-------------------------
+Cell voltage 1~48
+1Priority + data ID+BMS address + PC address
+0x18950140 tx
+Priority + data ID+ PC address +BMS address
+0x18954001 rx
+
+/** Each unit voltage of 2 byte, according
+* to the actual number of units sent, 
+* a maximum of 96 byte, divided into 16 frames sent
+*/
+
+byte 0          : frame number, starting from 0,0 xFF invalid
+byte 1 ~ byte 6 : monomer voltage (1 mV)
+byte 7          : reserved
+--------------------data 6 end-------------------------
+--------------------data 7 begin-------------------------
+Monomer temperature 1~16
+1Priority + data ID+BMS address + PC address
+0x18960140 tx
+Priority + data ID+ PC address +BMS address
+0x18964001 rx
+
+/** Each unit voltage of 2 byte, according
+* to the actual number of units sent, 
+* a maximum of 96 byte, divided into 16 frames sent
+*/
+
+byte 0          : frame number, starting at 0
+byte 1 ~ byte 7 : monomer temperature (40 Offset，°C)
+--------------------data 7 end-------------------------
+
