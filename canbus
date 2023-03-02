@@ -108,4 +108,87 @@ Priority + data ID+ PC address +BMS address
 byte 0          : frame number, starting at 0
 byte 1 ~ byte 7 : monomer temperature (40 Offset，°C)
 --------------------data 7 end-------------------------
+--------------------data 8 begin-------------------------
+Monomer equilibrium state
+1Priority + data ID+BMS address + PC address
+0x18970140 tx
+Priority + data ID+ PC address + BMS address
+0x18974001 rx
 
+0: OFF, 1: ON
+
+Bit 0  : monomer 1 equilibrium state
+
+...
+Bit 47 : monomer 48 equilibrium state
+Bit 48 ~ Bit 63 : reserved
+--------------------data 8 end-------------------------
+--------------------data 9 begin-------------------------
+Battery failure status
+1Priority + data ID+BMS address + PC address
+0x18980140 tx
+Priority + data ID+ PC address + BMS address
+0x18984001 rx
+
+0-> No error
+1-> Error
+
+Byte 0
+       Bit 0 : one stage warning of unit over voltage
+       Bit 1 : one stage warning of unit over voltage
+       Bit 2 : one stage warning of unit over voltage
+       Bit 3 : two stage warning of unit over voltage
+       Bit 4 : Total voltage is too high One alarm
+       Bit 5 : Total voltage is too high Level two alarm
+       Bit 6 : Total voltage is too low One alarm
+       Bit 7 : Total voltage is too low Level two alarm
+Byte 1
+       Bit 0 : Charging temperature too high. One alarm
+       Bit 1 : Charging temperature too high. Level two alarm
+       Bit 2 : Charging temperature too low. One alarm
+       Bit 3 : Charging temperature's too low. Level two alarm
+       Bit 4 : Discharge temperature is too high. One alarm
+       Bit 5 : Discharge temperature is too high. Level two alarm
+       Bit 6 : Discharge temperature is too low. One alarm
+       Bit 7 : Discharge temperature is too low. Level two alarm
+Byte 2
+       Bit 0: Charge over current. Level one alarm
+       Bit 1: Charge over current, level two alarm
+       Bit 2: Discharge over current. Level one alarm
+       Bit 3: Discharge over current, level two alarm
+       Bit 4: SOC is too high an alarm
+       Bit 5: SOC is too high. Alarm Two
+       Bit 6: SOC is too low. level one alarm
+       Bit 7: SOC is too low. level two alarm
+Byte 3
+       Bit 0: Excessive differential pressure level one alarm
+       Bit 1: Excessive differential pressure level two alarm
+       Bit 2: Excessive temperature difference level one alarm
+       Bit 3: Excessive temperature difference level two alarm    
+Byte 4
+       Bit 0: charging MOS overtemperature warning
+       Bit 1: discharge MOS overtemperature warning
+       Bit 2: charging MOS temperature detection sensor failure
+       Bit 3: discharge MOS temperature detection sensor failure
+       Bit 4: charging MOS adhesion failure
+       Bit 5: discharge MOS adhesion failure
+       Bit 6: charging MOS breaker failure
+       Bit 7: discharge MOS breaker failure   
+Byte 5      
+       Bit 0: AFE acquisition chip malfunction
+       Bit 1: monomer collect drop off
+       Bit 2: Single Temperature Sensor Fault
+       Bit 3: EEPROM storage failures
+       Bit 4: RTC clock malfunction
+       Bit 5: Precharge Failure
+       Bit 6: vehicle communications malfunction
+       Bit 7: intranet communication module malfunction  
+Byte 6：
+       Bit 0: Current Module Failure
+       Bit 1: main pressure detection module
+       Bit 2: Short circuit protection failure
+       Bit 3: Low Voltage No Charging
+       Bit 4: MOS GPS or soft switch MOS off
+       Bit 5~Bit7: Reserved
+Byte 7：fault code (if 0 x 03, show "fault code 3",0 do not show)
+--------------------data 9 end-------------------------
