@@ -1,0 +1,34 @@
+https://stackoverflow.com/questions/70677434/qpixmap-must-construct-a-qguiapplication-before-a-qpixmap
+
+
+I am writing a simple C++ and QT QML program, where QML will get value from C++.
+
+C++
+
+main.cpp
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
+#include <QQuickView>
+#include <QQmlContext>
+
+int main(int argc, char *argv[])
+{
+  QQuickView view;
+  QQmlContext* context = view.engine()->rootContext();
+  context->setContextProperty("_aString",QString("KADB"));
+  context->setContextProperty("_aSize",QSize(800,600));
+  context->setContextProperty("_bakcground",QColor(Qt::lightGray));
+}
+QML main.qml
+
+import QtQuick 2.0
+Rectangle{
+    width: _aSize.width
+    height: _aSize.height
+    color: _bakcground
+
+    Column {
+        Text { text: "The string: " + _aString}
+        Text { text: "The size: " + _aSize}
+    }
+}
