@@ -83,3 +83,12 @@ sudo nano /boot/cmdline.txt ->
 
 faydalı link-Raspberry Pi: Run Qt Application on Startup (2 Solutions!!)
 https://www.youtube.com/watch?v=RycZC8N1Gvk
+
+
+raspberry pi gcc c kodu çalıştırma
+https://www.circuitbasics.com/how-to-write-and-run-a-c-program-on-the-raspberry-pi/
+sudo nano hello-world.c
+kodu yaz
+gcc hello-world.c -o myfirstcprogram
+chmod +x myfirstcprogram
+./myfirstcprogram
