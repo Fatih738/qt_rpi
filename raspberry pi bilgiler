@@ -92,3 +92,6 @@ kodu yaz
 gcc hello-world.c -o myfirstcprogram
 chmod +x myfirstcprogram
 ./myfirstcprogram
+
+linux driver ların kurulumu
+https://kb.meinbergglobal.com/kb/driver_software/driver_software_for_linux/linux_driver_package_on_raspberry_pi
